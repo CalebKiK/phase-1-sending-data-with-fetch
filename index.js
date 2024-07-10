@@ -15,10 +15,7 @@ function submitData(name, email){
 
     .then((response) => response.json())
     .then(data => {
-        const userId = document.createElement("p");
-        userId.textContent = `New User ID: ${data.Id}`;
-
-        body.document.appendChild(userId);
+        document.body.innerHTML += `<p>${data.id}</p>`;
     })
     
     .catch(error => {
